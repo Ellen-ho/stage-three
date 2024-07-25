@@ -27,44 +27,45 @@ function submitData() {
 }
 
 function updatePageWithContent(textContent, file) {
-    const container = document.getElementById('input-container');
+    const container = document.getElementById('post-container');
+
+    const card = document.createElement('div');
 
     const textElement = document.createElement('p');
     textElement.textContent = textContent;
-    container.appendChild(textElement); 
+    card.appendChild(textElement); 
 
     if (file) {
         const imgURL = URL.createObjectURL(file);  
         const imgElement = document.createElement('img');
         imgElement.src = imgURL;  
-        imgElement.style.maxWidth = "200px"; 
-        container.appendChild(imgElement); 
+        imgElement.className = 'post-image'; 
+        card.appendChild(imgElement); 
 
         imgElement.onload = () => {
             URL.revokeObjectURL(imgURL);
         }
     }
-
-    const newHr = document.createElement('hr');
-    container.appendChild(newHr); 
+    container.appendChild(card);
 }
 
 function updatePageWithImageUrl(textContent, imageUrl) {
-    const container = document.getElementById('input-container');
+    const container = document.getElementById('post-container');
+
+    const card = document.createElement('div');
+    card.className = 'card';
 
     const textElement = document.createElement('p');
     textElement.textContent = textContent;
-    container.appendChild(textElement); 
+    card.appendChild(textElement); 
 
     if (imageUrl) {
         const imgElement = document.createElement('img');
         imgElement.src = imageUrl;  
-        imgElement.style.maxWidth = "200px"; 
-        container.appendChild(imgElement); 
+        imgElement.className = 'post-image'; 
+        card.appendChild(imgElement); 
     }
-
-    const newHr = document.createElement('hr');
-    container.appendChild(newHr); 
+    container.appendChild(card);
 }
 
 const uploadButton = document.getElementById('upload-button')
