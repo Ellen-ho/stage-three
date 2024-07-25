@@ -9,8 +9,6 @@
 
  #content{
     padding: 20px 0;
-    display: flex;
-    justify-content: center;
     background-image: url('/static/images/bg-picture.png');  
     background-size: cover;   
     background-position: center; 
@@ -29,6 +27,21 @@
    gap:15px
  }
 
+ #input-container .input-wrapper{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap:15px;
+   padding: 0 10px;
+ }
+
+#text-content {
+   width: 300px
+}
+
+#file-upload {
+   width: 300px
+}
 
 #input-container h2{
    color: #666666;
@@ -42,6 +55,7 @@ label {
 }
 
 hr {
+ width:100%;
  margin: 20px 0;
 }
 
@@ -96,7 +110,8 @@ hr {
 .card p{
  font-size: 24px;
  color: #757575;
- font-weight: 400
+ font-weight: 400;
+ /* height: 30%; */
 }
 
 .card .post-image {
@@ -106,3 +121,17 @@ hr {
    margin: 10px auto;
    object-fit: cover;  
 }
+
+@media (max-width: 400px){
+   .wrapper {
+     min-width: 340px;
+   }
+
+   #text-content {
+      width: 200px
+   }
+   
+   #file-upload {
+      width: 200px
+   }
+ }
