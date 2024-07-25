@@ -4,13 +4,18 @@
 
   body {
     font-family: 'Noto Sans TC', sans-serif;
-    height: 100vh;
-    padding-top:54px;
+    height: 100vh
   }
 
  #content{
+    padding: 20px 0;
     display: flex;
     justify-content: center;
+    background-image: url('/static/images/bg-picture.png');  
+    background-size: cover;   
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%; 
  }
 
 .wrapper{
@@ -37,7 +42,7 @@ label {
 }
 
 hr {
- margin: 20px 0
+ margin: 20px 0;
 }
 
 #upload-button{
@@ -53,12 +58,16 @@ hr {
 }
 
 .card {
-   background-color: #fff; 
-   box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+   background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); 
+   box-shadow: 0 2px 5px rgba(0,0,0,0.5); 
    width: 90%; 
    padding: 20px; 
-   box-sizing: border-box; 
    border-radius: 8px; 
+   transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+   transform: scale(1.05);
 }
 
 .card p{
