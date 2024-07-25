@@ -71,7 +71,7 @@ async def get_all_posts():
     try:
         conn = get_db_connection()
         cursor = conn.cursor(dictionary=True)
-        cursor.execute("SELECT text, object_key FROM posts")
+        cursor.execute("SELECT text, object_key FROM posts ORDER BY created_at DESC")
         posts = cursor.fetchall()
         for post in posts:
             post['image_url'] = f'https://{cloudfront_domain}/{post["object_key"]}'

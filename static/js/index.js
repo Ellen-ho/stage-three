@@ -57,7 +57,7 @@ function updatePageWithContent(textContent, file) {
             URL.revokeObjectURL(imgURL);
         }
     }
-    container.appendChild(card);
+    container.prepend(card);
 }
 
 function updatePageWithImageUrl(textContent, imageUrl) {
@@ -76,7 +76,7 @@ function updatePageWithImageUrl(textContent, imageUrl) {
         imgElement.className = 'post-image'; 
         card.appendChild(imgElement); 
     }
-    container.appendChild(card);
+    container.prepend(card);
 }
 
 const uploadButton = document.getElementById('upload-button')
