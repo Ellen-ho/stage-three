@@ -40,6 +40,7 @@ function updatePageWithContent(textContent, file) {
     const container = document.getElementById('post-container');
 
     const card = document.createElement('div');
+    card.className = 'card';
 
     const textElement = document.createElement('p');
     textElement.textContent = textContent;

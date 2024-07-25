@@ -97,26 +97,26 @@ hr {
 .card {
    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); 
    box-shadow: 0 2px 5px rgba(0,0,0,0.5); 
-   width: 90%; 
+   width: 80%; 
+   height:350px;
    padding: 20px; 
    border-radius: 8px; 
-   transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-   transform: scale(1.05);
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   gap:10px
 }
 
 .card p{
+ width: 40%;
  font-size: 24px;
  color: #757575;
  font-weight: 400;
- /* height: 30%; */
+ overflow: auto;
 }
 
 .card .post-image {
-   width: 220px;       
-   height: 180px;      
+   width: 60%;           
    display: block;   
    margin: 10px auto;
    object-fit: cover;  
