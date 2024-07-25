@@ -3,6 +3,16 @@ function submitData() {
     const fileInput = document.getElementById('file-upload');
     const formData = new FormData();
 
+    if (!textContent.trim()) {
+        alert('尚未輸入文字');
+        return; 
+    }
+
+    if (fileInput.files.length === 0) {
+        alert('尚未選擇圖片');
+        return; 
+    }
+
     if (fileInput.files.length > 0) {
         const file = fileInput.files[0];
         formData.append('file', file, file.name); 

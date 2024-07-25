@@ -47,7 +47,30 @@ hr {
 
 #upload-button{
    display: block;  
-   margin: 0 auto;  
+   margin: 0 auto; 
+   cursor: pointer; 
+   display: block;
+   padding: 10px 20px; 
+   background-color: #4CAF50; 
+   color: white; 
+   border: none; 
+   border-radius: 5px; 
+   font-size: 16px; 
+   cursor: pointer; 
+   transition: background-color 0.3s, transform 0.2s; 
+}
+
+#upload-button:hover {
+   background-color: #45a049; 
+}
+
+#upload-button:active {
+   transform: scale(0.98); 
+}
+
+#upload-button:focus {
+   outline: none;
+   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 .posts {
