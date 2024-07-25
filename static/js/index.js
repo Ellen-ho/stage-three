@@ -76,7 +76,7 @@ function updatePageWithImageUrl(textContent, imageUrl) {
         imgElement.className = 'post-image'; 
         card.appendChild(imgElement); 
     }
-    container.prepend(card);
+    container.append(card);
 }
 
 const uploadButton = document.getElementById('upload-button')
